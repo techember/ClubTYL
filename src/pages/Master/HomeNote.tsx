@@ -9,7 +9,7 @@ export const HomeNote = () => {
 
   const fetchNote = async () => {
     try {
-      const res = await fetch("http://localhost:5005/api/home-note");
+      const res = await fetch("https://api.clubtyl.techember.in/api/home-note");
       const data = await res.json();
       if (data.Data) {
         setNoteText(data.Data.text);
@@ -29,7 +29,7 @@ export const HomeNote = () => {
     
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5005/api/home-note", {
+      const res = await fetch("https://api.clubtyl.techember.in/api/home-note", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

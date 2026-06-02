@@ -48,7 +48,7 @@ export const NotificationManagement = () => {
   const fetchNotifications = async () => {
     try {
       const res = await fetch(
-        `http://localhost:5005/api/notification/list/admin`,
+        `https://api.clubtyl.techember.in/api/notification/list/admin`,
         {
           method: "GET",
           headers: {
@@ -84,7 +84,7 @@ export const NotificationManagement = () => {
   const sendNotification = async () => {
     try {
       const res = await fetch(
-        `http://localhost:5005/api/notification/push`,
+        `https://api.clubtyl.techember.in/api/notification/push`,
         {
           method: "POST",
           headers: {
@@ -138,7 +138,7 @@ export const NotificationManagement = () => {
         formData.append("status", notification.popStatus);
 
       const res = await fetch(
-        `http://localhost:5005/api/pop-image/update`,
+        `https://api.clubtyl.techember.in/api/pop-image/update`,
         {
           method: "PUT",
           headers: {
@@ -178,7 +178,7 @@ export const NotificationManagement = () => {
       formData.append("content", notification.message || "");
 
       const res = await fetch(
-        `http://localhost:5005/api/notification/push-image`,
+        `https://api.clubtyl.techember.in/api/notification/push-image`,
         {
           method: "POST",
           headers: {

@@ -68,7 +68,7 @@ export const Reports: React.FC = () => {
       setLoading(true);
 
       const res = await axios.get(
-        "http://localhost:5005/api/txn/list/all?limit=10000",
+        "https://api.clubtyl.techember.in/api/txn/list/all?limit=10000",
         { headers: tokenHeader() },
       );
 

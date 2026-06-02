@@ -102,7 +102,7 @@ export const Dashboard = () => {
 
       try {
         // 1. Fetch Dashboard Stats
-        const response = await fetch("http://localhost:5005/api/dashboard", {
+        const response = await fetch("https://api.clubtyl.techember.in/api/dashboard", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -118,7 +118,7 @@ export const Dashboard = () => {
         const addMoneySection = data[3];
 
         // 2. Fetch Users for Balance
-        const usersResponse = await fetch("http://localhost:5005/api/user/list", {
+        const usersResponse = await fetch("https://api.clubtyl.techember.in/api/user/list", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

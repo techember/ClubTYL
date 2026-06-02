@@ -10,7 +10,7 @@ export const NewsManagement = () => {
 
   const fetchNews = async () => {
     try {
-      const res = await fetch("http://localhost:5005/api/news");
+      const res = await fetch("https://api.clubtyl.techember.in/api/news");
       const data = await res.json();
       if (data.success) {
         setNewsList(data.Data || []);
@@ -29,8 +29,8 @@ export const NewsManagement = () => {
     
     try {
       const url = editingId 
-        ? `http://localhost:5005/api/news/${editingId}`
-        : "http://localhost:5005/api/news";
+        ? `https://api.clubtyl.techember.in/api/news/${editingId}`
+        : "https://api.clubtyl.techember.in/api/news";
       const method = editingId ? "PUT" : "POST";
 
       const res = await fetch(url, {
@@ -67,7 +67,7 @@ export const NewsManagement = () => {
   const handleDelete = async (id: string) => {
     if (!window.confirm("Are you sure you want to delete this news item?")) return;
     try {
-      const res = await fetch(`http://localhost:5005/api/news/${id}`, {
+      const res = await fetch(`https://api.clubtyl.techember.in/api/news/${id}`, {
         method: "DELETE",
         headers: {
           token: `${localStorage.getItem("token")}`,

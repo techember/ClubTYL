@@ -66,7 +66,7 @@ export const ServiceControl = () => {
 
   const loadServices = async () => {
     try {
-      const response = await fetch("http://localhost:5005/api/service/list");
+      const response = await fetch("https://api.clubtyl.techember.in/api/service/list");
       const data = await response.json();
       const list = data?.Data || [];
       setServices(list.map(coerceService));
@@ -81,7 +81,7 @@ export const ServiceControl = () => {
 
   const toggleService = async (serviceId: string, status: boolean) => {
     try {
-      await fetch(`http://localhost:5005/api/service/${serviceId}`, {
+      await fetch(`https://api.clubtyl.techember.in/api/service/${serviceId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

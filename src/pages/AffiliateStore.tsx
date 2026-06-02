@@ -69,7 +69,7 @@ export const AffiliateStore: React.FC = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:5005/api/affiliate/admin-list`,
+        `https://api.clubtyl.techember.in/api/affiliate/admin-list`,
         {
           method: "GET",
           headers: { token: localStorage.getItem("token") || "" },
@@ -147,7 +147,7 @@ export const AffiliateStore: React.FC = () => {
       if (form.imageFile) formData.append("image", form.imageFile);
 
       const res = await fetch(
-        "http://localhost:5005/api/affiliate/create",
+        "https://api.clubtyl.techember.in/api/affiliate/create",
         {
           method: "POST",
           headers: { token: localStorage.getItem("token") || "" },
@@ -184,7 +184,7 @@ export const AffiliateStore: React.FC = () => {
       if (form.imageFile) formData.append("image", form.imageFile);
 
       const res = await fetch(
-        `http://localhost:5005/api/affiliate/update/${editId}`,
+        `https://api.clubtyl.techember.in/api/affiliate/update/${editId}`,
         {
           method: "PATCH",
           headers: { token: localStorage.getItem("token") || "" },
@@ -209,7 +209,7 @@ export const AffiliateStore: React.FC = () => {
   const handleDelete = async (id: string) => {
     try {
       const res = await fetch(
-        `http://localhost:5005/api/affiliate/remove/${id}`,
+        `https://api.clubtyl.techember.in/api/affiliate/remove/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -370,7 +370,7 @@ export const AffiliateStore: React.FC = () => {
                       <td className="px-6 py-4">
                         <div className="h-12 w-12 rounded-lg overflow-hidden bg-white border border-border shadow-sm flex items-center justify-center p-1 group-hover:scale-105 transition-transform">
                           <img
-                            src={`http://localhost:5005/${item.imageUrl}`}
+                            src={`https://api.clubtyl.techember.in/${item.imageUrl}`}
                             alt={item.name}
                             className="h-full w-full object-contain"
                           />

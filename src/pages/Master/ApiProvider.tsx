@@ -41,7 +41,7 @@ export const ApiProvider = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        "http://localhost:5005/api/setting/api-provider",
+        "https://api.clubtyl.techember.in/api/setting/api-provider",
         {
           headers: {
             token: localStorage.getItem("token") || "",
@@ -63,7 +63,7 @@ export const ApiProvider = () => {
     setOperatorLoading(true);
     try {
       const response = await fetch(
-        "http://localhost:5005/api/cyrus/operator_api_settings",
+        "https://api.clubtyl.techember.in/api/cyrus/operator_api_settings",
         {
           headers: {
             token: localStorage.getItem("token") || "",
@@ -97,7 +97,7 @@ export const ApiProvider = () => {
   const handleOperatorChange = async (operatorName: string, serviceType: string, newProvider: string) => {
     try {
       const response = await fetch(
-        "http://localhost:5005/api/cyrus/operator_api_settings",
+        "https://api.clubtyl.techember.in/api/cyrus/operator_api_settings",
         {
           method: "POST",
           headers: {
@@ -136,7 +136,7 @@ export const ApiProvider = () => {
     setIsSwitching(true);
     try {
       const response = await fetch(
-        "http://localhost:5005/api/setting/api-provider",
+        "https://api.clubtyl.techember.in/api/setting/api-provider",
         {
           method: "PATCH",
           headers: {

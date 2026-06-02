@@ -37,7 +37,7 @@ export const WalletManagement = () => {
       console.log("Fetching all wallet transactions...");
 
       const res = await axios.get(
-        `http://localhost:5005/api/wallet/wallet-txn?limit=10000`,
+        `https://api.clubtyl.techember.in/api/wallet/wallet-txn?limit=10000`,
         { headers: { token } },
       );
       console.log("Fetch Response:", res.data);
@@ -212,7 +212,7 @@ export const WalletManagement = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5005/api/wallet/wallet-txn",
+        "https://api.clubtyl.techember.in/api/wallet/wallet-txn",
         {
           userId: selectedUser,
           amount: Number(amount),

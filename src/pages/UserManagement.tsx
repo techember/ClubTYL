@@ -72,7 +72,7 @@ export const UserManagement = () => {
     try {
       setLoading(true);
 
-      const res = await fetch("http://localhost:5005/api/user/list", {
+      const res = await fetch("https://api.clubtyl.techember.in/api/user/list", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -108,7 +108,7 @@ export const UserManagement = () => {
   const loadAllUsers = async () => {
     try {
       // request a large limit to fetch all; safe for <2000 users
-      const res = await fetch("http://localhost:5005/api/user/list", {
+      const res = await fetch("https://api.clubtyl.techember.in/api/user/list", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -153,7 +153,7 @@ export const UserManagement = () => {
       );
 
       const res = await fetch(
-        "http://localhost:5005/api/user/status-update",
+        "https://api.clubtyl.techember.in/api/user/status-update",
         {
           method: "PATCH",
           headers: {
@@ -190,7 +190,7 @@ export const UserManagement = () => {
   const fetchUserWallet = async (userId: string) => {
     try {
       const res = await fetch(
-        `http://localhost:5005/api/wallet/wallet-txn?userId=${userId}`,
+        `https://api.clubtyl.techember.in/api/wallet/wallet-txn?userId=${userId}`,
         { headers: { token: TOKEN } },
       );
 
@@ -230,7 +230,7 @@ export const UserManagement = () => {
       };
 
       const res = await fetch(
-        "http://localhost:5005/api/admin/manage-user-wallet",
+        "https://api.clubtyl.techember.in/api/admin/manage-user-wallet",
         {
           method: "PUT",
           headers: {

@@ -44,7 +44,7 @@ export const Banner: React.FC = () => {
 
   // ✅ Fetch banners from backend or mock
   useEffect(() => {
-    fetch(`http://localhost:5005/api/home-banner/admin/list`, {
+    fetch(`https://api.clubtyl.techember.in/api/home-banner/admin/list`, {
       method: "GET",
       headers: {
         token: localStorage.getItem("token") || "",
@@ -67,7 +67,7 @@ export const Banner: React.FC = () => {
   const currentItems = banners.slice(startIndex, endIndex);
 
   const handleDelete = (id: string) => {
-    fetch(`http://localhost:5005/api/home-banner/${id}`, {
+    fetch(`https://api.clubtyl.techember.in/api/home-banner/${id}`, {
       method: "DELETE",
       headers: {
         token: localStorage.getItem("token") || "",
@@ -108,7 +108,7 @@ export const Banner: React.FC = () => {
       formData.append("image", editImageFile);
     }
 
-    fetch(`http://localhost:5005/api/home-banner/${editBanner._id}`, {
+    fetch(`https://api.clubtyl.techember.in/api/home-banner/${editBanner._id}`, {
       method: "PUT",
       headers: {
         token: localStorage.getItem("token") || "",
@@ -150,7 +150,7 @@ export const Banner: React.FC = () => {
       formData.append("image", newBanner.imageFile);
     }
 
-    fetch(`http://localhost:5005/api/home-banner/create`, {
+    fetch(`https://api.clubtyl.techember.in/api/home-banner/create`, {
       method: "POST",
       body: formData,
       headers: {
@@ -215,7 +215,7 @@ export const Banner: React.FC = () => {
                       <td className="px-6 py-4">
                         <div className="h-16 w-24 rounded-lg overflow-hidden bg-accent border border-border shadow-sm group-hover:shadow-md transition-all">
                           <img
-                            src={"http://localhost:5005/" + item.image}
+                            src={"https://api.clubtyl.techember.in/" + item.image}
                             alt={` ${item.name}`}
                             className="h-full w-full object-cover"
                           />
@@ -355,7 +355,7 @@ export const Banner: React.FC = () => {
                             showEditModal
                               ? editImageFile
                                 ? URL.createObjectURL(editImageFile)
-                                : "http://localhost:5005/" + editBanner?.image
+                                : "https://api.clubtyl.techember.in/" + editBanner?.image
                               : newBanner.imageFile
                                 ? URL.createObjectURL(newBanner.imageFile!)
                                 : ""

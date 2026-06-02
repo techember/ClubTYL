@@ -77,7 +77,7 @@ export const CommissionSettings = () => {
         setLoading(true);
 
         const response = await fetch(
-          `http://localhost:5005/api/commission/admin/list?page=1&limit=20`,
+          `https://api.clubtyl.techember.in/api/commission/admin/list?page=1&limit=20`,
           {
             method: "GET",
             headers: {
@@ -123,7 +123,7 @@ export const CommissionSettings = () => {
       }
 
       const res = await fetch(
-        `http://localhost:5005/api/commission/update/${id}`,
+        `https://api.clubtyl.techember.in/api/commission/update/${id}`,
         {
           method: "PUT",
           headers: {
@@ -153,7 +153,7 @@ export const CommissionSettings = () => {
   // DELETE COMMISSION (FIXED)
   const deleteCommission = async (id: string) => {
     try {
-      await fetch(`http://localhost:5005/api/commission/delete/${id}`, {
+      await fetch(`https://api.clubtyl.techember.in/api/commission/delete/${id}`, {
         method: "DELETE",
         headers: { token: `${localStorage.getItem("token")}` },
       });
