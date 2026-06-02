@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "jsx": "react"
+  },
+  "extends": "@react-native/typescript-config",
+  "include": ["**/*.ts", "**/*.tsx", "src/screens/PersonalInfoScreen.jsx"],
+  "exclude": ["**/node_modules", "**/Pods"]
+}
