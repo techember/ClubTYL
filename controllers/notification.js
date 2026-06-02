@@ -16,12 +16,27 @@ const app_key_provider = {
 
 const admin = require("firebase-admin");
 
-// Initialize Firebase Admin
 const serviceAccount = require("../data/firebase-service-account.json");
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
+if (serviceAccount && serviceAccount.project_id) {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+  });
+} else {
+  console.warn("⚠️ Warning: Missing valid firebase-service-account.json. Firebase Admin SDK not initialized. Push notifications will be mocked.");
+  
+  // Mock messaging to prevent crashes when other functions call admin.messaging()
+  admin.messaging = () => ({
+    send: async () => { 
+      console.warn("Mock push notification sent"); 
+      return { success: true }; 
+    },
+    sendEachForMulticast: async () => { 
+      console.warn("Mock bulk push notification sent"); 
+      return { successCount: 0, failureCount: 0, responses: [] }; 
+    }
+  });
+}
 
 const configuration = OneSignal.createConfiguration({
   authMethods: {
