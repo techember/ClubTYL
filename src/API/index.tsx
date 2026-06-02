@@ -3,7 +3,7 @@ import axios from 'axios';
 import { store } from '../redux/store';
 // ✅ Import Redux store instance
 // ✅ BASE URL
-const API_BASE_URL = 'http://10.86.244.92:5005';
+const API_BASE_URL = 'https://api.clubtyl.techember.in';
 
 // ✅ Create axios instance
 const api = axios.create({

@@ -45,7 +45,7 @@ const BillPayments = () => {
       <View style={styles.iconWrapper}>
         {item?.icon ? (
           <Image
-            source={{ uri: 'http://10.86.244.15:5005/' + item.icon }}
+            source={{ uri: 'https://api.clubtyl.techember.in/' + item.icon }}
             style={styles.image}
           />
         ) : (

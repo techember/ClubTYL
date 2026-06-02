@@ -1176,7 +1176,7 @@ const HomeScreen = () => {
           </TouchableOpacity>
 
           <Image
-            source={{ uri: `http://10.86.244.15:5005/${POPUP.image}` }}
+            source={{ uri: `https://api.clubtyl.techember.in/${POPUP.image}` }}
             style={styles.popupImage}
           />
         </View>
@@ -1326,7 +1326,7 @@ const HomeScreen = () => {
                 onPress={() => item?.link && Linking.openURL(item.link)}
               >
                 <Image
-                  source={{ uri: 'http://10.86.244.15:5005/' + item.image }}
+                  source={{ uri: 'https://api.clubtyl.techember.in/' + item.image }}
                   style={styles.bannerImage}
                 />
               </TouchableOpacity>
@@ -1398,7 +1398,7 @@ const HomeScreen = () => {
                   >
                     <Image
                       source={{
-                        uri: 'http://10.86.244.15:5005/' + item.icon,
+                        uri: 'https://api.clubtyl.techember.in/' + item.icon,
                       }}
                       style={{ width: 34, height: 34, resizeMode: 'contain', marginBottom: 8 }}
                     />
@@ -1454,7 +1454,7 @@ const HomeScreen = () => {
                       )}
                       <Image
                         source={{
-                          uri: 'http://10.86.244.15:5005/' + item.icon,
+                          uri: 'https://api.clubtyl.techember.in/' + item.icon,
                         }}
                         style={{
                           width: 34,
@@ -1487,7 +1487,7 @@ const HomeScreen = () => {
                 style={styles.serviceCard1}
                 onPress={() => navigation.navigate('Report', { id: UserData?._id, activeTab: 'Ledger' })}
               >
-                <Image source={{ uri: 'http://10.86.244.15:5005/uploads/icon_ledger.png' }} style={{ width: 34, height: 34, resizeMode: 'contain', marginBottom: 8 }} />
+                <Image source={{ uri: 'https://api.clubtyl.techember.in/uploads/icon_ledger.png' }} style={{ width: 34, height: 34, resizeMode: 'contain', marginBottom: 8 }} />
                 <Text style={styles.cardText1} numberOfLines={1}>Ledger</Text>
               </TouchableOpacity>
             </View>
@@ -1498,7 +1498,7 @@ const HomeScreen = () => {
                 style={styles.serviceCard1}
                 onPress={() => Linking.openURL('whatsapp://send?phone=+917489252106')}
               >
-                <Image source={{ uri: 'http://10.86.244.15:5005/uploads/icon_whatsapp.png' }} style={{ width: 34, height: 34, resizeMode: 'contain', marginBottom: 8 }} />
+                <Image source={{ uri: 'https://api.clubtyl.techember.in/uploads/icon_whatsapp.png' }} style={{ width: 34, height: 34, resizeMode: 'contain', marginBottom: 8 }} />
                 <Text style={styles.cardText1} numberOfLines={1}>WhatsApp</Text>
               </TouchableOpacity>
             </View>
@@ -1509,7 +1509,7 @@ const HomeScreen = () => {
                 style={styles.serviceCard1}
                 onPress={() => Linking.openURL('https://www.youtube.com/@ClubTYL')}
               >
-                <Image source={{ uri: 'http://10.86.244.15:5005/uploads/icon_youtube.png' }} style={{ width: 34, height: 34, resizeMode: 'contain', marginBottom: 8 }} />
+                <Image source={{ uri: 'https://api.clubtyl.techember.in/uploads/icon_youtube.png' }} style={{ width: 34, height: 34, resizeMode: 'contain', marginBottom: 8 }} />
                 <Text style={styles.cardText1} numberOfLines={1}>YouTube</Text>
               </TouchableOpacity>
             </View>
@@ -1530,7 +1530,7 @@ const HomeScreen = () => {
               {bottomBanner.map((item, index) => (
                 <Image
                   key={index}
-                  source={{ uri: 'http://10.86.244.15:5005/' + item.image }}
+                  source={{ uri: 'https://api.clubtyl.techember.in/' + item.image }}
                   style={{
                     width: SCREEN_WIDTH - 30,
                     height: 150,

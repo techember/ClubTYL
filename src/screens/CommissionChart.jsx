@@ -55,7 +55,7 @@ const CommissionChart = () => {
 
     let imageUrl = icon;
     if (icon && !icon.startsWith('http')) {
-      imageUrl = `http://10.86.244.15:5005/${icon}`;
+      imageUrl = `https://api.clubtyl.techember.in/${icon}`;
     }
 
     console.log('FINAL URL:', imageUrl);

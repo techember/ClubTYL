@@ -192,7 +192,7 @@ const PlanScreen = ({ route }) => {
           <Image
             source={{
               uri:
-                'http://10.86.244.15:5005' +
+                'https://api.clubtyl.techember.in' +
                 (currentOperator?.icon || OperatorProfile),
             }}
             style={styles.operatorIcon}

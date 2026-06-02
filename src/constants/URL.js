@@ -1,4 +1,4 @@
-//export const URL='http://192.168.43.199:5000'
-export const URL='http://10.86.244.92:5000'
+//export const URL='https://api.clubtyl.techember.in'
+export const URL='https://api.clubtyl.techember.in'
 
 
