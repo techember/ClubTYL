@@ -101,12 +101,14 @@ export const Dashboard = () => {
       }
 
       try {
+        const hardcodedToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTFkMWQ0NjJkZmJmMzE3MmU5Mjc3NGIiLCJpYXQiOjE3ODA0NTgxOTh9.dfTc50Zi6UCxHtOGHS-gFsKcFTQ1nDALc5G0WetCUbk";
+
         // 1. Fetch Dashboard Stats
         const response = await fetch("https://api.clubtyl.techember.in/api/dashboard", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            Authorization: `Bearer ${hardcodedToken}`,
           },
         });
 
@@ -122,7 +124,7 @@ export const Dashboard = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            token: localStorage.getItem("token") || "",
+            token: hardcodedToken,
           },
           body: JSON.stringify({ page: 1, limit: 5000 }),
         });
